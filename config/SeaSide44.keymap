@@ -24,20 +24,20 @@
         combo_left_click {
             timeout-ms = <10>;
             key-positions = <19 20>;
-            bindings = <&mkp MB1>
-        }
+            bindings = <&mkp MB1>;
+        };
         
         combo_right_click {
             timeout-ms = <10>;
             key-positions = <20 21>;
-            bindings = <&mkp MB2>
-        }
+            bindings = <&mkp MB2>;
+        };
         
         combo_scroll {
             timeout-ms = <10>;
             key-positions = <19 20 21>;
-            bindings = <&mo 5>
-        }
+            bindings = <&mo 5>;
+        };
     };
 
     macros {
