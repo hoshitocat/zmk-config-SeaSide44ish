@@ -7,7 +7,7 @@
 #define SYMBOL 2
 #define ARROW 3
 #define FUNCTION 4
-#define SCROLL 5
+#define MOUSE 5
 #define CONFIG 6
 #define MEDIA 7
 
@@ -40,7 +40,7 @@
         combo_scroll {
             timeout-ms = <50>;
             key-positions = <19 20 21>;
-            bindings = <&mo SCROLL>;
+            bindings = <&mo MOUSE>;
         };
     };
 
@@ -114,11 +114,11 @@
             >;
         };
 
-        SCROLL {
+        MOUSE {
             bindings = <
-                &trans  &trans  &trans  &trans     &trans  &trans                                        &trans  &trans  &trans  &trans  &trans  &trans
-                &trans  &trans  &trans  &trans     &trans  &trans                                        &trans  &trans  &trans  &trans  &trans  &trans
-                &trans  &trans  &trans  &trans     &trans  &trans                                        &trans  &trans  &trans  &trans  &trans  &trans
+                &trans  &trans  &trans  &trans     &trans  &trans                                        &trans  &trans   &trans   &trans  &trans  &trans
+                &trans  &trans  &trans  &trans     &trans  &trans                                        &trans  &mkp MB1 &mkp MB2 &trans  &trans  &trans
+                &trans  &trans  &trans  &trans     &trans  &trans                                        &trans  &trans   &trans   &trans  &trans  &trans
                                 &trans  &trans     &trans  &trans  &trans                        &trans  &trans                          &trans
             >;
         };
