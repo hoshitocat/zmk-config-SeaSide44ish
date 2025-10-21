@@ -7,9 +7,10 @@
 #define SYMBOL 2
 #define ARROW 3
 #define FUNCTION 4
-#define MOUSE 5
-#define CONFIG 6
-#define MEDIA 7
+#define SCROLL 5
+#define MOUSE 6
+#define CONFIG 7
+#define MEDIA 8
 
 &mt {
     flavor = "balanced";
@@ -40,7 +41,7 @@
         combo_scroll {
             timeout-ms = <50>;
             key-positions = <19 20 21>;
-            bindings = <&mo MOUSE>;
+            bindings = <&mo SCROLL>;
         };
     };
 
@@ -114,11 +115,20 @@
             >;
         };
 
+        SCROLL {
+            bindings = <
+                &trans  &trans  &trans  &trans     &trans  &trans                                        &trans  &trans  &trans  &trans  &trans  &trans
+                &trans  &trans  &trans  &trans     &trans  &trans                                        &trans  &trans  &trans  &trans  &trans  &trans
+                &trans  &trans  &trans  &trans     &trans  &trans                                        &trans  &trans  &trans  &trans  &trans  &trans
+                                &trans  &trans     &trans  &trans  &trans                        &trans  &trans                          &trans
+            >;
+        };
+
         MOUSE {
             bindings = <
-                &trans  &trans  &trans  &trans     &trans  &trans                                        &trans  &trans   &trans   &trans  &trans  &trans
-                &trans  &trans  &trans  &trans     &trans  &trans                                        &trans  &mkp MB1 &mkp MB2 &trans  &trans  &trans
-                &trans  &trans  &trans  &trans     &trans  &trans                                        &trans  &trans   &trans   &trans  &trans  &trans
+                &trans  &trans  &trans  &trans     &trans  &trans                                        &trans  &trans    &trans    &trans  &trans  &trans
+                &trans  &trans  &trans  &trans     &trans  &trans                                        &trans  &mkp MB1  &mkp MB2  &trans  &trans  &trans
+                &trans  &trans  &trans  &trans     &trans  &trans                                        &trans  &trans    &trans    &trans  &trans  &trans
                                 &trans  &trans     &trans  &trans  &trans                        &trans  &trans                          &trans
             >;
         };
