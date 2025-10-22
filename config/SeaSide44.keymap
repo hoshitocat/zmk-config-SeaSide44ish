@@ -39,7 +39,7 @@
         
         combo_scroll {
             timeout-ms = <50>;
-            key-positions = <21 22>;
+            key-positions = <19 20 21>;
             bindings = <&mo SCROLL>;
         };
     };
