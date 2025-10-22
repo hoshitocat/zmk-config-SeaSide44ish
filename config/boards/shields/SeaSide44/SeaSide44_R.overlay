@@ -25,7 +25,6 @@
         12 // LCTRL
         19 // J
         20 // K
-        22 // ;
         24 // LSHIFT
         38 // LEFT_WIN
         39 // LEFT_ALT
@@ -40,6 +39,17 @@
         device = <&trackball>;
 
         input-processors = <&zip_temp_layer 6 10000>;
+    
+        // セミコロン長押しで入る SCROLL(L5) が有効な間だけ
+        // トラックボールの XY をスクロールイベントに変換する
+        scroller {
+            layers = <5>;
+            input-processors = <&zip_xy_to_scroll_mapper>;
+            // 必要なら感度を調整（例: 倍率や加速度を入れる場合）
+            // scale-x = <1>;
+            // scale-y = <1>;
+            // invert-y;  // 逆方向が好みなら有効化
+        };
     };
 };
 
