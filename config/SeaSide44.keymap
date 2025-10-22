@@ -2,6 +2,7 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/pointing.h>
+#include <input/processors.dtsi>
 
 #define NUM 1
 #define SYMBOL 2
@@ -20,6 +21,12 @@
 &lt {
     flavor = "balanced";
     quick-tap-ms = <300>;
+};
+
+/* AML: マウスキーを押すまでマウスレイヤーに留まる */
+/* マウスレイヤーのときのTimeoutを10secとし、逆にマウスキーを押下されたら250msでレイヤーを抜けるようにし実現 */
+&mkp_input_listener {
+    input-processors = <&zip_temp_layer 6 250>;
 };
 
 / {

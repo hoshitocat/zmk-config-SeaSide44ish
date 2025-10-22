@@ -33,12 +33,6 @@
     require-prior-idle-ms = <200>;
 };
 
-/* AML: マウスキーを押すまでマウスレイヤーに留まる */
-/* マウスレイヤーのときのTimeoutを10secとし、逆にマウスキーを押下されたら250msでレイヤーを抜けるようにし実現 */
-// &mkp_input_listener {
-//     input-processors = <&zip_temp_layer 6 250>;
-// };
-
 /* Trackball のリスナー */ 
 / {
     trackball_listener {
